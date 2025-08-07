@@ -1,30 +1,94 @@
-The dataset used in this task is acquired from [kaggle](https://www.kaggle.com/datasets/rohitsahoo/sales-forecasting)
 
+# 📊 Sales Forecasting Dashboard — Task Documentation
 
-The excel file contains 4 sheets, the first one contains the original dataset (), the second contains the data results from preprocessing, the last two sheets contains the required in the task.
+## 📁 Excel File Overview
 
-Data Cleaning:
+- **Source**: [Kaggle - Sales Forecasting](https://www.kaggle.com/datasets/rohitsahoo/sales-forecasting)  
+- **File Format**: Excel Workbook (.xlsx)  
+- **Sheets Included**:
+  1. **Original Dataset** – Raw data as downloaded from Kaggle with initial preprocessing applied
+  2. **Preprocessed Dataset** – Cleaned and transformed for analysis  
+  3. **Key Metrics** – Pivot table visualizations and performance indicators  
+  4. **Overall Performance** – Geographic and categorical breakdowns
 
+---
 
-data type of The original data set: it contained 8 categorical columns, 2 date columns, an ID column, 3 other ID columns , 2 numerical columns (one of them is sales, which is the core of the dataset), 2 text columns.
+## 🧹 Data Cleaning & Preprocessing
 
-No ducplicates in the used dataset is found.
+### 🔍 Original Dataset Structure:
+- **Total Columns**: 18  
+- **Types of Columns**:
+  - **Categorical**: 8  
+  - **Date**: 2  
+  - **Primary ID**: 1  
+  - **Additional IDs**: 3  
+  - **Numerical**: 2 (including `Sales`, the core metric)  
+  - **Text**: 2  
 
-Performed Data cleaning on this dataset, the resulted data is have 10 columns out of 18 in the original.
+### 🚫 Duplicate & Missing Data:
+- **Duplicates**: None (verified using Excel’s “Remove Duplicates” tool)  
+- **Blank Cells**: 11 (all in the `Postal Code` column, verified with `=COUNTBLANK()` formula)
 
-The cleaned dataset contains 10 columns: ID columns, 3 numerical columns (two of them is a transformed values from the two data columns mentioned above, order ID column, 5 categorical columns).
+### 🧼 Cleaning Summary:
+- The cleaned dataset contains **10 columns**, reduced from the original 18.
+- Key transformations include:
+  - Extracting **month** and **year** from `Order Date`
+  - Removing redundant or overly detailed columns
 
+### ✅ Retained Columns:
+- **IDs**: `Row ID`, `Order ID`
+- **Categorical**: `Segment`, `Ship Mode`, `Region`, `Category`, `State`
+- **Numerical**: `Sales`, `Order Month`, `Order Year`
 
-The removed columns are: country column (as the data only cares about US), City (as we want to see the big picture and the trend in the whole state), Subcategory (as this will lead to more sophisticated analysis and the important one is the category not the subcatogery), Product Name, Postal code, Product ID ,Order and Ship Dates columns , Customer Name and Customer ID columns (as the customer could be known from the order ID).
+### 🗑️ Removed Columns:
+| Column           | Reason for Removal |
+|------------------|--------------------|
+| `Country`        | Only US data is relevant |
+| `City`           | State-level analysis suffices |
+| `Sub-Category`   | Focused on high-level category only |
+| `Product Name`   | Too detailed for this analysis |
+| `Postal Code`    | Not relevant for trend analysis |
+| `Product ID`     | Redundant with category info |
+| `Order Date`, `Ship Date` | Replaced with `Order Month` & `Order Year` |
+| `Customer Name`, `Customer ID` | Customer is traceable through `Order ID` |
 
-Key metrics Sheet contains the number of the units sold and the total revenue and the montly trends (All of these are made by pivot tables) and Both YoY and MoM changes, that all of them have slicers that filter these metrics upon these slicers.
+---
 
-Overall Performance Sheet contains a map that shows the distribution of the overall sales done by each state in the US made from a pivot table but it is inserted in a seperate table to easily get this map as it require a static data, and two pie charts that made by pivot tables that checks the percentage of each category in the catogrical features/columns (segment, ship mode) and also these two are controled by slicers that fileter them and also filters the pivot chart that shows each state percentage from the sales.
+## 📈 Key Metrics Sheet
 
+This sheet provides core business performance insights using **Pivot Tables**, including:
 
-Data Set Summary:
-Data Source: [Kaggle - Sales Forecasting](https://www.kaggle.com/datasets/rohitsahoo/sales-forecasting)
-Columns Count: 18
-Rows Count: 9800
-Duplicates: None (Verified using remove duplicates button in data tab in the menu bar)
-Blank cells: 11 (All of them is in Postal Code column, checked by countblank formula)
+- 🔢 **Total Units Sold**
+- 💵 **Total Revenue**
+- 📅 **Monthly Trends**
+- 📊 **Year-over-Year (YoY) Change**
+- 📉 **Month-over-Month (MoM) Change**
+
+All metrics are enhanced with **Slicers**, allowing dynamic filtering by `Category` and `Region` fields.
+
+---
+
+## 🌍 Overall Performance Sheet
+
+This section focuses on geographic and categorical distribution of sales:
+
+- 🗺️ **US Sales Map**  
+  - Visualizes total sales by **state**  
+  - Built from a pivot table but placed in a static table to support map creation
+
+- 🥧 **Pie Charts for Categorical Breakdown**  
+  - One for `Segment`  
+  - One for `Ship Mode`  
+  - Both charts are interactive and controlled by **Slicers**, which also allowing dynamic filtering by `Category` and `Region` fields.
+
+---
+
+## 📌 Dataset Summary
+
+| Metric            | Value |
+|-------------------|-------|
+| **Total Rows**     | 9,800 |
+| **Total Columns**  | 18    |
+| **Duplicates**     | None  |
+| **Blank Cells**    | 11 (in `Postal Code`) |
+| **Source**         | [Kaggle Dataset](https://www.kaggle.com/datasets/rohitsahoo/sales-forecasting) |
