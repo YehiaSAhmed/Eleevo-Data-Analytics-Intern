@@ -9,4 +9,5 @@ It includes all the following tasks:
 | level | Task # | Task Title | Compliation Date |  Used Tools
 | ----- | ----- | ----- | ----- | ---- |
 | 1 | 1 | Sales Performance Dashboard | 07 August 2025 | Excel
-| 1 | 2 |  |  |  |
+| 1 | 2 | Exploratory Data Analysis (EDA) on the Titanic Dataset  | 16 August 2025 | Python |
+|  |  |   |  |
