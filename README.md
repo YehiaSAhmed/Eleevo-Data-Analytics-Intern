@@ -12,6 +12,6 @@ It includes all the following tasks:
 | 1 | 1 | Sales Performance Dashboard | 07 August 2025 | Excel
 | 1 | 2 | Exploratory Data Analysis (EDA) on the Titanic Dataset  | 16 August 2025 | Python |
 | 2 | 3 | Customer Segmentation Using RFM analysis  | 28 August 2025 | Python |
-| 2 | 5 | SQL-based Analysis of Product Sales | |
+| 2 | 5 | SQL-based Analysis of Product Sales | 04 September 2025 | Python & SQL
 
-*Note: “Task #” refers to the task number in the internship sequence.
+Note: “*Task #*” refers to the task number in the internship sequence.
