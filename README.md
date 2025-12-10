@@ -1,8 +1,10 @@
-# Data Analytics Intern 
+# Data Analytics Internship 
 
-This repository is made for the tasks required in the Data Analytics intern from [Eleevo Pathways](https:https://github.com/elevvopaths).
-This internship spans from 5th of August 2025 till 5th of September 2025 (One Month).
-The internship requires completing 4 out of the 9 available tasks.
+This repository was made for the tasks required of the data analytics internship from [Elevvo Pathways](https://github.com/elevvopaths).
+
+This internship spanned from the 5th of August 2025 till the 5th of September 2025 (one month).
+
+The internship required completing 4 out of the 9 available tasks.
 
 ## Tasks:
 It includes all the following tasks:
